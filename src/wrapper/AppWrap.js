@@ -3,7 +3,7 @@ import { SocialMedia, NavigationDots } from '../components';
 
 const AppWrap = ( Component, idName, classNames) => function HOC() {
 
-  let date = new Date
+  let date = new Date();
   const year = date.getFullYear();
   
   return (
