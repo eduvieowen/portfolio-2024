@@ -11,9 +11,10 @@
 # production
 /build
 
-# misc
+# secret
 .env
-.gitignore
+
+# misc
 .DS_Store
 .env.local
 .env.development.local
