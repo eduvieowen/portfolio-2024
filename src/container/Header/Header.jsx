@@ -5,15 +5,29 @@ import { images } from "../../constants";
 import "./Header.scss";
 import AppWrap from '../../wrapper/AppWrap';
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
+// const scaleVariants = {
+//   whileInView: {
+//     scale: [0, 1],
+//     opacity: [0, 1],
+//     transition: {
+//       duration: 1,
+//       ease: 'easeInOut'
+//     }
+//   }
+// }
+
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({ 
+    opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
-      ease: 'easeInOut'
+      delay: 0.3 * index,
     }
-  }
+  }),
 }
 
 const Header = () => {
@@ -28,7 +42,7 @@ const Header = () => {
 
           <div className='badge-cmp app__flex'>
 
-            <span>👋🏾</span>
+            <span>👨🏾‍🚀</span>
             <div style={{ marginLeft: 20 }}>
               <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Eduvie</h1>
@@ -47,7 +61,7 @@ const Header = () => {
       {/* Header Image */}
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        transition={{ duration: 0.5 }}
         className='app__header-img'
       >
 
@@ -59,20 +73,32 @@ const Header = () => {
           src={images.circle}
           alt='profile_circle'
         />
+
       </motion.div>
 
       {/* Header Circles */}
-      <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
+      <div
+        // variants={scaleVariants}
+        // whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
-          <div className='circle-cmp app__flex' key={`circle-${index}`}>
-            <img src={circle} alt="circle" />
-          </div>
+        {[images.python, images.react, images.node, images.django, images.tailwind].map((circle, index) => (
+          <motion.div 
+            variants={fadeInVariants}
+            initial="initial"
+            whileInView="animate"               
+            custom={index}
+            className='app__flex' 
+            key={`circle-${index}`}
+          >
+            <img 
+              src={circle} 
+              alt="circle" 
+            />
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
+
     </div>
   )
 }
