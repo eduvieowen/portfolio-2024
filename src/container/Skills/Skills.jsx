@@ -26,17 +26,37 @@ const Skills = () => {
       })
   }, [])
 
+  
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: (index) => ({ 
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.15 * index,
+      ease: "easeInOut"
+    }
+  }),
+}
+
   return (
     <>
       <h2 className='head-text'>Skills and Experiences</h2>
 
       <div className='app__skills-container'>
+
+        {/* Skills */}
         <motion.div className='app__skills-list'>
 
-          {skills?.map((skill) => (
+          {skills?.map((skill, index) => (
             <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              variants={fadeInVariants}
+              initial="initial"
+              whileInView="animate"               
+              custom={index}
               className='app__skills-item app__flex'
               key={skill.name}
             >
@@ -48,7 +68,8 @@ const Skills = () => {
           ))}
 
         </motion.div>
-
+        
+        {/* Experiences */}
         <motion.div className='app__skills-exp'>
 
           {experiences?.map((experience) => (
