@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 :root {
   --font-base: "DM Sans", sans-serif;
+  --font-alt: "Playfair Display", serif;
 
   --primary-color: #edf2f8;
   --secondary-color: #C20114;
