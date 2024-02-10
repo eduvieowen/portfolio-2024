@@ -19,7 +19,9 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile_circle_cropped.png';
+import profile_cartoon from '../assets/cartoon_ed_cropped.png';
 import circle from '../assets/circle.svg';
+import dark_circle from '../assets/dark_circle.svg';
 import logo from '../assets/globe_icon_white.png';
 import logoBlack from '../assets/globe_icon_black.png';
 
@@ -44,7 +46,9 @@ export default {
   about03,
   about04,
   profile,
+  profile_cartoon,
   circle,
+  dark_circle,
   logo,
   logoBlack,
 };

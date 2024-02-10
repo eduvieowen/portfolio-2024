@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { client, urlFor } from "../../client";
 import { AppWrap, MotionWrap } from '../../wrapper';
 
-import "./Work.scss";
+import "./Works.scss";
 
-const Work = () => {
+const Works = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
@@ -56,6 +56,7 @@ const Work = () => {
         ))}
 
       </div>
+      
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -120,7 +121,6 @@ const Work = () => {
 
 
 export default AppWrap (
-  MotionWrap(Work, 'app__works'), 
-  'work',
-  'app__primarybg'
+  MotionWrap(Works, 'app__works'), 
+  'works'
 );

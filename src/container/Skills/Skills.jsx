@@ -44,7 +44,7 @@ const fadeInVariants = {
 
   return (
     <>
-      <h2 className='head-text'>Skills and Experiences</h2>
+      <h2 className='head-text'><span>Skills</span> & <span>Experiences</span></h2>
 
       <div className='app__skills-container'>
 
@@ -118,6 +118,5 @@ const fadeInVariants = {
 
 export default AppWrap (
   MotionWrap(Skills, 'app__skills'), 
-  'skills',
-  'app__whitebg'
+  'skills'
 );

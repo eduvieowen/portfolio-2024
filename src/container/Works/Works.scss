@@ -18,7 +18,7 @@
         margin: 0.5rem;
         border-radius: 0.5rem;
         background-color: #fff;
-        color: #000;
+        color: #000 !important;
 
         font-weight: 800;
 
@@ -38,7 +38,7 @@
 
     .item-active {
         background-color: var(--secondary-color);
-        color: #fff;
+        color: #fff !important;
     }
 }
 
@@ -49,7 +49,7 @@
     align-items: center;
 
     .app__work-item {
-        width: 270px;
+        width: 40%;
         flex-direction: column;
         margin: 2rem;
         padding: 1rem;
@@ -65,12 +65,12 @@
         }
 
         @media screen and (min-width: 2000px) {
-            width: 470px;
+            // width: 40%;
             padding: 1.25rem;
             border-radius: 0.75rem;
         }
 
-        @media screen and (min-width: 300px){
+        @media screen and (max-width: 900px){
             width: 100%;
             margin: 1rem;
         }
@@ -141,10 +141,12 @@
     h4 {
         margin-top: 1rem;
         line-height: 1.5rem;
+        color: #000 !important;
     }
 
     p {
         margin-top: 10px;
+        color: var(--gray-color) !important;
     }
 
     .app__work-tag {

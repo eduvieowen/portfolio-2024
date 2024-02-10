@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 .app {
-  background-color: var(--primary-color);
+  // background-color: var(--primary-color);
   font-family: var(--font-base);
 }
 
@@ -11,6 +11,30 @@
 
 .app__primarybg {
   background-color: var(--primary-color);
+}
+
+#light #about, 
+#light #skills, 
+#light #contact {
+  background-color: var(--white-color);
+}
+
+#light #home, 
+#light #works, 
+#light #testimonials {
+  background-color: var(--primary-color);
+}
+
+#dark #about, 
+#dark #skills, 
+#dark #contact {
+  background-color: var(--dark-color);
+}
+
+#dark #home, 
+#dark #works, 
+#dark #testimonials {
+  background-color: var(--primary-color-dark);
 }
 
 .app__container {
@@ -51,9 +75,14 @@
     text-transform: uppercase;
     color: var(--black-color);
   }
+
+  #dark p {
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
 }
 
-.head-text {
+#light .head-text {
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
@@ -73,7 +102,27 @@
   }
 }
 
-.p-text {
+#dark .head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color-dark);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+#light .p-text {
   font-size: 0.8rem;
   text-align: left;
   color: var(--gray-color);
@@ -84,10 +133,36 @@
   }
 }
 
-.bold-text {
+#dark .p-text {
+  font-size: 0.8rem;
+  text-align: left;
+  color: var(--lightGray-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
+#light .bold-text {
   font-size: 1rem;
   font-weight: 800;
   color: var(--black-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
+#dark .bold-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {
@@ -151,7 +226,7 @@
   }
 }
 
-.app__navigation {
+#light .app__navigation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,14 +254,51 @@
   }
 }
 
+#dark .app__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1.5rem;
+
+  .app__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    margin-top: 2rem;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--secondary-color-dark);
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
 
-  .app__navigation,
+  #light .app__navigation,
   .app__social {
     display: none;
   }
 
-  .copyright {
+  #light .copyright {
+    padding: 2rem;
+  }
+
+  #dark .app__navigation,
+  .app__social {
+    display: none;
+  }
+
+  #dark .copyright {
     padding: 2rem;
   }
 }

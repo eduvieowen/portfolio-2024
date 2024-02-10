@@ -116,9 +116,11 @@
         img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
             object-fit: cover;
 
             filter: grayscale(1);
+            cursor: pointer;
         }
 
         &:hover {

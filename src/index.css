@@ -5,13 +5,16 @@
   --font-base: "DM Sans", sans-serif;
   --font-alt: "Playfair Display", serif;
 
+  --white-color: #ffffff;
+  --dark-color: #0F0F0F;
   --primary-color: #edf2f8;
+  --primary-color-dark: #202020;  
+
   --secondary-color: #C20114;
+  --secondary-color-dark: #DA0C81;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
 
   --sec-altcolor: #2B4162;
   --altcolor-1: #283618;

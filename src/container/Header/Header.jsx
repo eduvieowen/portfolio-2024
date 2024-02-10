@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import "./Header.scss";
 import AppWrap from '../../wrapper/AppWrap';
+import { ThemeContext } from '../../App';
 
 // const scaleVariants = {
 //   whileInView: {
@@ -31,6 +32,8 @@ const fadeInVariants = {
 }
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -44,15 +47,16 @@ const Header = () => {
 
             <span>👨🏾‍🚀</span>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Hello, I am</p>
+              <p className='p-text'>Welcome, I'm</p>
               <h1 className='head-text'>Eduvie</h1>
             </div>
 
           </div>
 
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Backend Developer</p>
-            <p className='p-text'>Freelancer</p>
+            <p className='p-text'>
+              "Backend Alchemist & Web Weaver, Tinkering with AI/ML & Frontend Fantasies. Devouring Films, Series, & Melodies on the Side."
+            </p>
           </div>
 
         </div>
@@ -66,17 +70,18 @@ const Header = () => {
       >
 
         <img src={images.profile} alt="profile-bg" />
+        {/* <img src={images.profile_cartoon} alt="profile-bg" /> */}
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
           className='overlay_circle'
-          src={images.circle}
+          src={theme === "light" ? images.circle  : images.dark_circle}
           alt='profile_circle'
         />
 
       </motion.div>
 
-      {/* Header Circles */}
+      {/* Header Skills Circles */}
       <div
         // variants={scaleVariants}
         // whileInView={scaleVariants.whileInView}
@@ -103,4 +108,7 @@ const Header = () => {
   )
 }
 
-export default AppWrap(Header, 'home');
+export default AppWrap(
+  Header, 
+  'home'
+  );
