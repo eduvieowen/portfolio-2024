@@ -18,6 +18,7 @@
     // display: flex;
     // justify-content: flex-start;
     // align-items: center;
+    cursor: pointer;
 
     img {
         width: 2.5rem;
@@ -169,11 +170,11 @@
         background-color: var(--white-color);
         // background-size: cover;
         // background-repeat: repeat;
-        box-shadow: 
-        0 7px 15px 0 rgba(0, 0, 0, .13), 
-        0 1px 4px 0 rgba(0, 0, 0, .11);
+        box-shadow:
+            0 7px 15px 0 rgba(0, 0, 0, .13),
+            0 1px 4px 0 rgba(0, 0, 0, .11);
         transform-origin: top;
-        
+
         svg {
             width: 35px;
             height: 35px;
@@ -212,10 +213,88 @@
             }
         }
 
+        ul li:last-child {
+            margin: 25px 0 25px 0;
+        }
+
+        ul li:last-child a {
+            position: relative;
+            padding: 5px;
+        
+            &::before,
+            &::after,
+            span::before,
+            span::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                transition: 1s;
+                animation: borderAnimation 3s linear infinite; /* Add animation here */
+            }
+        
+            &::before {
+                top: -2px;
+                left: -2px;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            &::after {
+                top: -2px;
+                right: -2px;
+                border-top: 2px solid transparent;
+                border-right: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            span::before {
+                bottom: -2px;
+                left: -2px;
+                border-bottom: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            span::after {
+                bottom: -2px;
+                right: -2px;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        }
+        
+        @keyframes borderAnimation {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            25% {
+                width: 100%;
+                height: 0;
+            }
+            50% {
+                width: 100%;
+                height: 100%;
+            }
+            75% {
+                width: 0;
+                height: 100%;
+            }
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
         @media screen and (min-width: 900px) {
             display: none;
         }
     }
+
     @media screen and (min-width: 900px) {
         display: none;
     }
@@ -260,11 +339,11 @@
         background-color: var(--dark-color);
         // background-size: cover;
         // background-repeat: repeat;
-        box-shadow: 
-        0 7px 15px 0 rgba(0, 0, 0, .13), 
-        0 1px 4px 0 rgba(0, 0, 0, .11);
+        box-shadow:
+            0 7px 15px 0 rgba(0, 0, 0, .13),
+            0 1px 4px 0 rgba(0, 0, 0, .11);
         transform-origin: top;
-        
+
         svg {
             width: 35px;
             height: 35px;
@@ -301,15 +380,216 @@
                     &:hover {
                         color: var(--secondary-color-dark);
                     }
-                    
+
                 }
             }
         }
+        
+        ul li:last-child {
+            margin: 25px 0 25px 0;
+        }
+
+        ul li:last-child a {
+            position: relative;
+            padding: 5px;
+        
+            &::before,
+            &::after,
+            span::before,
+            span::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                transition: 1s;
+                animation: borderAnimation 3s linear infinite; /* Add animation here */
+            }
+        
+            &::before {
+                top: -2px;
+                left: -2px;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            &::after {
+                top: -2px;
+                right: -2px;
+                border-top: 2px solid transparent;
+                border-right: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            span::before {
+                bottom: -2px;
+                left: -2px;
+                border-bottom: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        
+            span::after {
+                bottom: -2px;
+                right: -2px;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
+                border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1; /* Apply linear gradient color */
+            }
+        }
+        
+        @keyframes borderAnimation {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            25% {
+                width: 100%;
+                height: 0;
+            }
+            50% {
+                width: 100%;
+                height: 100%;
+            }
+            75% {
+                width: 0;
+                height: 100%;
+            }
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+        
+        // ul li:last-child a {
+        //     position: relative;
+        //     padding: 5px;
+
+        //     &::before,
+        //     &::after,
+        //     span::before,
+        //     span::after {
+        //         content: '';
+        //         position: absolute;
+        //         width: 8px;
+        //         height: 8px;
+        //         background: transparent;
+        //         transition: 1s;
+        //         /* -webkit-mix-blend-mode: hue; */
+        //     }
+
+        //     &::before {
+        //         top: -2px;
+        //         left: -2px;
+        //         border-top: 2px solid #ff0;
+        //         border-left: 2px solid #ff0;
+        //     }
+
+        //     &::after {
+        //         top: -2px;
+        //         right: -2px;
+        //         border-top: 2px solid #ff0;
+        //         border-right: 2px solid #ff0;
+        //     }
+
+        //     span::before {
+        //         bottom: -2px;
+        //         left: -2px;
+        //         border-bottom: 2px solid #ff0;
+        //         border-left: 2px solid #ff0;
+        //     }
+
+        //     span::after {
+        //         bottom: -2px;
+        //         right: -2px;
+        //         border-bottom: 2px solid #ff0;
+        //         border-right: 2px solid #ff0;
+        //     }
+
+
+        //     &:hover::before,
+        //     &:hover::after,
+        //     &:hover span::before,
+        //     &:hover span::after {
+        //         width: calc(180px / 2);
+        //         height: calc(50px / 2);
+        //     }
+        // }
+
+        // ul li:last-child a {
+        //     text-decoration: none;
+        //     position: relative;
+
+        //     &:hover {
+        //         color: linear-gradient(to right, #DA0C81, #F5AB35);
+        //     }
+
+        //     &:after {
+        //         content: "";
+        //         position: absolute;
+        //         bottom: -4px;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 3px;
+        //         background: linear-gradient(to right, #DA0C81, #F5AB35);
+        //         transform: scaleX(0);
+        //         animation: scribble 3s ease-in-out forwards;
+        //         animation-iteration-count: infinite;
+        //     }
+
+        //     @keyframes scribble {
+        //         0% {
+        //             transform: scaleX(0);
+        //         }
+
+        //         50% {
+        //             transform: scaleX(1);
+        //         }
+
+        //         100% {
+        //             transform: scaleX(0);
+        //         }
+        //     }
+        // }
+
+        // ul li:last-child a {
+        //     position: relative;
+
+        //     &:after {
+        //       content: "❤️";
+        //       position: absolute;
+        //       top: 50%;
+        //       left: 50%;
+        //       transform: translate(-50%, -50%);
+        //       font-size: 2em;
+        //     //   color: #DA0C81;
+        //       opacity: 0;
+        //       animation: lovebeat 1s ease-in-out infinite alternate;
+        //     }
+
+        //     @keyframes lovebeat {
+        //       0% {
+        //         opacity: 0;
+        //         transform: translate(-50%, -50%) scale(1);
+        //       }
+        //       50% {
+        //         opacity: 1;
+        //         transform: translate(-50%, -50%) scale(1.2);
+        //       }
+        //       100% {
+        //         opacity: 0;
+        //         transform: translate(-50%, -50%) scale(1);
+        //       }
+        //     }
+        //   }
+
 
         @media screen and (min-width: 900px) {
             display: none;
         }
     }
+
     @media screen and (min-width: 900px) {
         display: none;
     }

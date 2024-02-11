@@ -18,6 +18,7 @@ const navLinks = [
   'work',
   'skills',
   'contact',
+  'valxed'
 ];
 
 const menuVariants = {
@@ -120,7 +121,7 @@ const Navbar = () => {
 
       <FormGroup>
         <FormControlLabel
-          control={<MaterialUISwitch/>}
+          control={<MaterialUISwitch defaultChecked/>}
           onChange={toggleTheme}
         />
       </FormGroup>
@@ -142,7 +143,7 @@ const Navbar = () => {
             // transition={{ duration: 0.85, ease: 'easeInOut' }}
             >
 
-              <HiX onClick={toggleMenu}>Close</HiX>
+              <HiX onClick={toggleMenu} />
 
               <ul>
                 {navLinks.map((item) => (
@@ -152,7 +153,7 @@ const Navbar = () => {
                       href={`#${item}`}
                       onClick={toggleMenu}
                     >
-                      {item}
+                      <span></span>{item}
                     </a>
                   </li>
 
