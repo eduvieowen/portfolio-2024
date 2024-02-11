@@ -25,7 +25,11 @@ const App = () => {
         <Skills />
         <Testimonials />
         <Footer />
+<<<<<<< HEAD
         {/* <Anniversary /> */}
+=======
+     {/*<Anniversary /> */}
+>>>>>>> 1456a9780291f56469d9dec7bf8c8aa8e0f6cd59
       </div>
     </ThemeContext.Provider>
   );
