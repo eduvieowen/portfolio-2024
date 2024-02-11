@@ -25,7 +25,7 @@ const App = () => {
         <Skills />
         <Testimonials />
         <Footer />
-        <Anniversary />
+        {/* <Anniversary /> */}
       </div>
     </ThemeContext.Provider>
   );
