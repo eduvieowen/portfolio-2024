@@ -214,10 +214,10 @@ const AnniversaryPage = () => {
                     <section className="experience-section">
                         <h2>Our Journey Together</h2>
                         <p>
-                            Over the course of the past 8 months, our love has flourished, growing stronger with each passing day. From thrilling adventures to serene moments of quietude, every shared memory has become a cherished treasure.
-                        </p>
-                        <p>
-                            Through laughter and challenges alike, our bond has deepened, illuminating the path forward with the warmth of our connection 🔗. Together, we've found solace in the beauty of our journey, each moment enriched by the presence of one another. Here's to the memories we've created and to the endless love that continues to bind us together.
+                            Over the course of the past 8 months, our love has flourished, growing stronger with each passing day. From thrilling adventures to serene moments of quietude, every shared memory has become a cherished treasure.<br/><br/>
+                        
+                            Through laughter and challenges alike, our bond has deepened, illuminating the path forward with the warmth of our connection 🔗.<br/> 
+                            We've found solace in the beauty of our journey, each moment enriched by the presence of one another. Here's to the memories we've created and to the endless love that continues to bind us together.
                         </p>
 
                         {/* <div className="milestone">
