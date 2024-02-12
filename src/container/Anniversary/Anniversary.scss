@@ -124,6 +124,13 @@
     padding: 0 2rem;
     text-align: left;
 
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // text-align: center;
+    }
+
     p {
         font-size: 1.25rem;
         line-height: 2rem;
@@ -183,7 +190,7 @@
 .app__anniversary-pics {
     width: 80%;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
     div {
         width: 150px;
@@ -192,7 +199,7 @@
         img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 2px;
             object-fit: cover;
 
             // filter: grayscale(1);
