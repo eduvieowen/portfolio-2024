@@ -7,6 +7,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import './Anniversary.scss';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client, urlFor } from "../../client";
+import { dispFireworks } from '../../components';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -55,6 +56,7 @@ const AnniversaryPage = () => {
         if (inputValue === correctPhrase) {
             setDisplayDiv(true);
             setShowForm(false);
+            dispFireworks();
         }
     };
 
