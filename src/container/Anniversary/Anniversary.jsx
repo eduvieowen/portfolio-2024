@@ -65,7 +65,6 @@ const AnniversaryPage = () => {
 
         client.fetch(query).then((data) => {
             setAnvpics(data);
-            console.log(data);
         });
 
     }, []);

@@ -12,10 +12,10 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
-const navLinks = [
+export const navLinks = [
   'home',
   'about',
-  'work',
+  'works',
   'skills',
   'contact',
   'valxed'

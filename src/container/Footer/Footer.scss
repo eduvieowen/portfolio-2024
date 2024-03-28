@@ -41,6 +41,7 @@
         a {
             text-decoration: none;
             font-weight: 500;
+            color: #000 !important;
         }
 
         &:hover {
@@ -53,7 +54,7 @@
         }
     }
 
-    
+
     @media screen and (max-width: 768px) {
         width: 100%;
     }
@@ -78,12 +79,13 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: var(--primary-color) !important;
-        
+
         transition: all 0.3s ease-in-out;
 
-        input, textarea {
-           width: 100%;
-           padding: 0.95rem;
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.95rem;
             border: none;
             border-radius: 7px;
             background-color: var(--primary-color) !important;
@@ -120,5 +122,88 @@
     @media screen and (min-width: 768px) {
         width: 100%;
         margin: 1rem 0;
+    }
+}
+
+.sent-message {
+    margin-top: 2rem;
+    position: relative;
+    padding: 25px;
+
+    &::before,
+    &::after,
+    span::before,
+    span::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        transition: 1s;
+        animation: borderAnimation 3s linear infinite;
+        /* Add animation here */
+    }
+
+    &::before {
+        top: -2px;
+        left: -2px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1;
+        /* Apply linear gradient color */
+    }
+
+    &::after {
+        top: -2px;
+        right: -2px;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1;
+        /* Apply linear gradient color */
+    }
+
+    span::before {
+        bottom: -2px;
+        left: -2px;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1;
+        /* Apply linear gradient color */
+    }
+
+    span::after {
+        bottom: -2px;
+        right: -2px;
+        border-bottom: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-image: linear-gradient(to right, #DA0C81, #F5AB35) 1;
+        /* Apply linear gradient color */
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    25% {
+        width: 100%;
+        height: 0;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+    }
+
+    75% {
+        width: 0;
+        height: 100%;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
     }
 }

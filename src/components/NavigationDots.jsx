@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../App';
+import { navLinks } from './Navbar/Navbar';
 
 const NavigationDots = ({ active }) => {
 
@@ -10,7 +11,7 @@ const NavigationDots = ({ active }) => {
   
   return (
     <div className='app__navigation'>
-        {['home', 'about', 'works', 'skills', 'testimonials', 'contact', 'valxed'].map((item, index) => (
+        {navLinks.map((item, index) => (
             <a 
                 href={`#${item}`}
                 key={item + index}
