@@ -18,7 +18,7 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
-import profile from '../assets/profile_circle_cropped.png';
+import profile from '../assets/profile_pic.png';
 import profile_cartoon from '../assets/cartoon_ed_cropped.png';
 import circle from '../assets/circle.svg';
 import dark_circle from '../assets/dark_circle.svg';
