@@ -3,6 +3,7 @@ import confetti from "canvas-confetti";
 export { default as Navbar } from './Navbar/Navbar';
 export { default as NavigationDots } from './NavigationDots';
 export { default as SocialMedia } from './SocialMedia';
+export { default as HamsterLoader } from './Loader/HamsterLoader';
 export const dispFireworks = () => {
     var duration = 3 * 1000;
     var animationEnd = Date.now() + duration;
